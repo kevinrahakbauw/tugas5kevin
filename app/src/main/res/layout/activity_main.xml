@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgkevin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Form Registrasi Penduduk"
+        android:textColor="#FFEB3B"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/inputnik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titletext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan NIK"
+        android:inputType="number"
+        android:nextFocusDown="@id/inputname"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/inputname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputnik"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Nama Lengkap"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@id/tlahir"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/tlahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Tempat Lahir"
+        android:inputType="text"
+        android:nextFocusDown="@id/tanggal"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tlahir"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Tanggal Lahir"
+        android:inputType="date"
+        android:nextFocusDown="@id/kota"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/kota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tanggal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Nama Kota/Kabupaten"
+        android:inputType="text"
+        android:nextFocusDown="@id/kec"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/kec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kota"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Nama Kecamatan"
+        android:inputType="text"
+        android:nextFocusDown="@id/alamat"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kec"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="17"
+        android:hint="Masukan Detail Alamat"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rg1"
+            android:layout_below="@id/jk">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki Laki"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+    <TextView
+        android:id="@+id/job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg1"
+        android:layout_centerHorizontal="true"
+        android:text="Pekerjaan"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rg2"
+            android:layout_below="@id/job">
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PNS"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pegawai Swasta"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/rb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pelajar"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/rb6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wiraswasta"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+    <TextView
+        android:id="@+id/nikah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg2"
+        android:layout_centerHorizontal="true"
+        android:text="Status Pernikahan"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rg3"
+            android:layout_below="@id/nikah">
+
+            <RadioButton
+                android:id="@+id/rb7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah Menikah"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/rb8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum Menikah"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg3"
+        android:layout_centerHorizontal="true"
+        android:background="#FFEB3B"
+        android:onClick="senddata"
+        android:text="Submit"
+        android:textColor="#09330B"
+        android:textStyle="bold" />
+</RelativeLayout>
